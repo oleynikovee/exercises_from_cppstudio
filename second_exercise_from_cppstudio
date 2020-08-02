@@ -1,0 +1,40 @@
+/*
+Mission:
+Запрограммировать следующее выражение: (а + b — f / а) + f * a * a — (a + b) Числа а, b, f вводятся с клавиатуры. 
+Организовать пользовательский интерфейс, таким образом, чтобы было понятно, в каком порядке должны вводиться числа.
+Level:
+Begginer
+*/
+/*
+@file second_exercise_from_cppstudio
+@author oleynikovee
+@Date 02.08.2020
+@brief BEGGINER_2
+*/
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<math.h>
+#include<locale.h>
+int main()
+{
+	int a, b, f, x;/*
+				     Переменные:
+				     a-число 1
+				     b-число 2
+			       f-число 3
+				     x-конечный результат
+				   */
+	setlocale(LC_CTYPE, "rus");/*Подключаем поддержку русского языка*/
+	printf("Введите a,b,f:\n");
+	printf("\na=");
+	scanf("%i", &a);
+	printf("\nb=");
+	scanf("%i", &b);
+	printf("\nf=");
+	scanf("%i", &f);
+	printf("\nВычисляем по формуле:(а + b — f / а) + f * a * a — (a + b)");
+	x = (a + b - f / a) + f * a * a -(a + b);/*Формула расчёта конечного результата*/
+	printf("\n");
+	printf("\nx=%i", x);
+	return 0;
+}
