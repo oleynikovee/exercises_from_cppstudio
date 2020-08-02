@@ -1,0 +1,26 @@
+/*
+Mission:
+Напишите программу, которая позволяет пользователю ввести в консоли латинскую букву нижнего регистра, 
+переводит её в верхний регистр и результат выводит в консоль.
+Level:
+Begginer
+*/
+/*
+@file third_exercise_from_cppstudio
+@author oleynikovee
+@Date 02.08.2020
+@brief BEGGINER_3
+*/
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<locale.h>
+int main()
+{
+	char bykva='a';
+	setlocale(LC_CTYPE, "rus");
+	printf("Введите букву нижнего регистра:\n");
+	scanf("%c", &bykva);
+	bykva = bykva - 32;/*Процесс подбора буквы верхнего регистра*/
+	printf("Та же буква в верхнем регистре:%c", bykva);
+	return 0;
+}
