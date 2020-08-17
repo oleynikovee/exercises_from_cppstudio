@@ -1,0 +1,26 @@
+/*
+Mission:
+Программа должна переводить число, введенное с клавиатуры в метрах, в километры.
+Level:
+Begginer
+*/
+/*
+@file fourth_exercise_from_cppstudio
+@author oleynikovee
+@Date 17.08.2020
+@brief BEGGINER_4
+*/
+#define _CRT_SECURE_NO_WARNINGS_
+#include<stdio.h>
+#include<locale.h>
+#include<math.h>
+int main()
+{
+	double a,b;
+	setlocale(LC_CTYPE, "rus");/*Знакомим программу с кириллицей*/
+	printf("Введите количество метров для преобразования в километры\n");
+	scanf_s("%lf", &a);
+	b = a / 1000;/*Преобразование метров в километры*/
+	printf("%.0lf м. будет равно %.3lf км.\n", a, b);
+	return 0;
+}
