@@ -1,0 +1,41 @@
+/*
+Mission:
+Составить алгоритм увеличения всех трех, введённых с клавиатуры, переменных на 5,если среди них есть хотя бы две равные. В противном случае выдать ответ «равных нет».
+Level:
+Begginer
+*/
+/*
+@file sixth_exercise_from_cppstudio
+@author oleynikovee
+@Date 26.08.2020
+@brief BEGINNER_6
+*/
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<locale.h>
+int main()
+{
+	int a, b, c;
+	setlocale(LC_CTYPE, "rus");/*Поддержка кирилицы!*/
+	printf("Введите число номер 1:");
+	scanf("%i", &a);
+	printf("\nВведите число номер 2:");
+	scanf("%i", &b);
+	printf("\nВведите число номер 3:");
+	scanf("%i", &c);
+	if (a == b || a == c || b == c)
+	{
+		a = a + 5;
+		b = b + 5;
+		c = c + 5;
+		printf("\nЧисло номер 1:%i", a);
+		printf("\nЧисло номер 2:%i", b);
+		printf("\nЧисло номер 3:%i", c);
+	}
+	else
+	{
+		printf("\nРавных нет!");
+	}
+	/*Выше наблюдаем процесс ввода чисел,а также процесс сравнивания чисел с ипользованием if/else*/
+	return 0;
+}
