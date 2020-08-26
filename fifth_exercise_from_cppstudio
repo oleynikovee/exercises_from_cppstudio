@@ -1,0 +1,42 @@
+/*
+Mission:
+Составить программу, которая требует ввести два числа. 
+Если первое число больше второго, то программа печатает слово "больше". 
+Если первое число меньше второго, то программа печатает слово "меньше". 
+А если числа равны, программа напечатает сообщение "Эти числа равны".
+Level:
+Begginer
+*/
+/*
+@file fifth_exercise_from_cppstudio
+@author oleynikovee
+@Date 26.08.2020
+@brief BEGINNER_5
+*/
+#define _CRT_SECURE_NO_WARNINGS_
+#include<stdio.h>
+#include<locale.h>
+#include<math.h>
+int main()
+{
+	int a, b;
+	setlocale(LC_CTYPE, "rus");/*Поддержка кириллицы!*/
+	printf("Введите 1е число:");
+	scanf_s("%i", &a);
+	printf("\nВведите 2е число:");
+	scanf_s("%i", &b);
+	if (a > b)
+	{
+		printf("\nБольше");
+	}
+	if (a == b)
+	{
+		printf("\nЭти числа равны");
+	}
+	if (a < b)
+	{
+		printf("\nМеньше");
+	}
+	/*Выше мы можем наблюдать процесс ввода чисел и процесс сравнения чисел с помощью if*/
+	return 0;
+}
